@@ -34,9 +34,8 @@ namespace Conditional_coinToss
                 }
 
                 else if (guess == "tails")
-                    Console.WriteLine("Tails, you were right!");
                 {
-
+                    Console.WriteLine("Tails, you were right!");
                 }
             }
 
