@@ -13,6 +13,7 @@ namespace Conditional_coinToss
             Random rand = new Random();
             int randValue = rand.Next(0, 2);
 
+            // heads
             if (randValue == 0)
             {
                 if (guess == "heads")
@@ -26,6 +27,7 @@ namespace Conditional_coinToss
                 }
             }
 
+            // tails
             else if (randValue == 1)
             {
                 if (guess == "heads")
