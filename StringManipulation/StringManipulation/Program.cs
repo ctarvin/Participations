@@ -7,13 +7,6 @@ namespace StringManipulation
         static string statement = "Programming today is a race between software engineers striving to build bigger " +
             "and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning.";
 
-        public static string Reverse(string oldword)
-        {
-            char[] chararray = oldword.ToCharArray();
-            Array.Reverse(chararray);
-            return new string (chararray);
-        }
-
         static void Main(string[] args)
         {
             Console.WriteLine(statement);
@@ -25,7 +18,13 @@ namespace StringManipulation
             do
             {
                 Console.WriteLine($"Sorry, I could not find your word '{oldword}'");
-                Console.WriteLine(Reverse(oldword));
+                
+                string reverse = "";
+                for (int i = 0; i < oldword.Length -1; i--)
+                {
+                    reverse += oldword[i];
+                }
+                Console.WriteLine(reverse);
 
                 Console.WriteLine("Please insert another word.");
                 oldword = Console.ReadLine();
