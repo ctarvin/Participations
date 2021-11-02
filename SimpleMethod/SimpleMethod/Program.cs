@@ -18,16 +18,16 @@ namespace SimpleMethod
             switch (animal.ToLower())
             {
                 case "dog":
-                    sound = "'Hi I am a dog'";
+                    sound = "'woof'";
                     break;
                 case "monkey":
-                    sound = "'Hi I am a monkey'";
+                    sound = "'ooooh ooooh aaaah aaaah'";
                     break;
                 case "goat":
-                    sound = "'Hi I am a goat'";
+                    sound = "'baaaah'";
                     break;
                 default:
-                    sound = "Please choose a dog, monkey, or goat. I really don't want to code anything else";
+                    sound = "This was not one of the options!";
                     break;
             }
             return sound;
