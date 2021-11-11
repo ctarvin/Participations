@@ -38,7 +38,7 @@ namespace MethodsParallelArrays
             }
             average = runningTotal / allGrades.Count;
 
-            Console.WriteLine($"This student has {allGrades.Count} grades and their average score is {average}\n");
+            Console.WriteLine($"This student has {allGrades.Count} grades and their average score is {average.ToString("N2")}\n");
         }
 
         static List<double> CreateRandomSizedListWithRandomValues()
