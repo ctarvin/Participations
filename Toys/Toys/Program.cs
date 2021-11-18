@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Toys
 {
@@ -6,30 +7,75 @@ namespace Toys
     {
         static void Main(string[] args)
         {
-            Toy Toy1 = new Toy();
-            Toy1.Manufacturer = "Hasbro";
-            Toy1.Name = "GI Joe";
-            Toy1.Price = 34.99;
-            Toy1.SetNotes("Tall toy man");
-            Console.WriteLine(Toy1.Manufacturer);
-            Console.WriteLine(Toy1.Name);
-            Console.WriteLine(Toy1.Price);
-            Console.WriteLine(Toy1.GetAisle());
-            Console.WriteLine(Toy1.GetNotes());
 
-            Console.WriteLine();
+            List<ToyBox> toyboxes = new List<ToyBox>();
 
-            Toy Toy2 = new Toy();
-            Toy2.Manufacturer = "Hasbro";
-            Toy2.Name = "Barbie";
-            Toy2.Price = 29.49;
-            Toy2.SetNotes("Tall toy woman");
-            Console.WriteLine(Toy2.Manufacturer);
-            Console.WriteLine(Toy2.Name);
-            Console.WriteLine(Toy2.Price);
-            Console.WriteLine(Toy2.GetAisle());
-            Console.WriteLine(Toy2.GetNotes());
+            do
+            {
+                ToyBox tb = new ToyBox();
+                Console.WriteLine("Who owns the ToyBox?");
+                tb.Owner = Console.ReadLine();
+                Console.WriteLine($"Where is {tb.Owner}'s ToyBox located?");
+                tb.Location = Console.ReadLine();
+
+                toyboxes.Add(tb);
+                Console.WriteLine("Do you want to create another ToyBox? y or n");
+            } while (Console.ReadLine().ToLower() != "n");
+
+            for (int i = 0; i < toyboxes.Count; i++)
+            {
+                Console.WriteLine($"Time to fill up {toyboxes[i].Owner}'s ToyBox!");
+
+                do
+                {
+                    Toy t = new Toy();
+
+                    t.Manufacturer = Console.ReadLine();
+                    t.Name = Console.ReadLine();
+                    t.Price = Convert.ToDouble(Console.ReadLine());
+
+                    Console.WriteLine("Do you have any notes for this toy? y or n");
+                    while (Console.ReadLine().ToLower() != "n")
+                    {
+                        Console.WriteLine("What is your note?");
+                        t.SetNotes(Console.ReadLine());
+
+                        Console.WriteLine("Do you have another note to add for this toy? y or n");
+                    }
+
+                    toyboxes[i].Toys.Add(t);
+                    Console.WriteLine("Do you want to create another Toy? y or n");
+                } while (Console.ReadLine().ToLower() != "n");
+
+            }
+
+
+
+
+
+            /*
+            ToyBox tb = new ToyBox();
+            tb.Location = "Norman";
+            tb.Owner = "Kaylee";
+            tb.Toys.Add(new Toy()
+            {
+                Manufacturer = "Hasbro",
+                Name = "Mr. Potato Head",
+                Price = 14.99,
+            }) ;
+
+            ToyBox tb2 = new ToyBox();
+            tb2.Location = "Dallas";
+            tb2.Owner = "Swetha";
+            tb2.Toys.Add(new Toy()
+            {
+                Manufacturer = "Pokemon",
+                Name = "Pikachu",
+                Price = 15.99,
+            }) ; */
+
         }
 
+        
     }
 }
