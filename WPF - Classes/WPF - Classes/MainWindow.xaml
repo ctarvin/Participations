@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPF___Classes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF___Classes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-16">
+        <Grid.Background>
+            <ImageBrush ImageSource="/xl_74afe3-scary-toys.jpg" Stretch="Fill"/>
+        </Grid.Background>
+        <Label Content="Toy Information" HorizontalAlignment="Left" Margin="512,28,0,0" VerticalAlignment="Top" Background="{x:Null}" Height="84" Width="263" FontSize="36"/>
+        <TextBox x:Name="txtManufacturer" HorizontalAlignment="Left" Margin="112,133,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="112,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Center" Margin="0,133,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtURL" HorizontalAlignment="Center" Margin="0,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="131,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="151,199,0,0" VerticalAlignment="Top"/>
+        <Label Content="Price" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.607,1.304"/>
+        <Label Content="Image URL" HorizontalAlignment="Center" Margin="0,199,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstInformation" HorizontalAlignment="Left" Height="201" Margin="536,0,0,0" VerticalAlignment="Center" Width="239" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="lstInformation_MouseDoubleClick"/>
+        <Button x:Name="btnGo" Content="Go" HorizontalAlignment="Left" Margin="246,278,0,0" VerticalAlignment="Top" Height="48" Width="85" Click="btnGo_Click"/>
+
+    </Grid>
+</Window>
