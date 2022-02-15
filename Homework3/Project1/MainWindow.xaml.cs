@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,13 @@ namespace Project1
         public MainWindow()
         {
             InitializeComponent();
+
+            var lines = File.ReadAllLines("TV Show Data.txt").Skip(1);
+
+            foreach (var line in lines)
+            {
+
+            }
         }
     }
 }

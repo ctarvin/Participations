@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:Project1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF8F4040">
+        <Label Content="TV Show Data" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label Content="Rating:" HorizontalAlignment="Left" Margin="44,98,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cboRating" HorizontalAlignment="Left" Margin="114,104,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Country:" HorizontalAlignment="Left" Margin="284,98,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cboCountry" HorizontalAlignment="Left" Margin="362,104,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Language:" HorizontalAlignment="Left" Margin="524,98,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cboLanguage" HorizontalAlignment="Left" Margin="621,104,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Center" Margin="0,157,0,0" VerticalAlignment="Top" Height="27" Width="82"/>
 
     </Grid>
 </Window>
