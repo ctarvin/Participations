@@ -17,6 +17,7 @@ namespace PokemonAPI
         public int weight { get; set; }
         public int height { get; set; }
         public string image { get; set; }
+        public string url { get; set; }
         public override string ToString()
         {
             return name;

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +25,27 @@ namespace PokemonAPI
         public MainWindow()
         {
             InitializeComponent();
+
+            string url = "https://pokeapi.co/api/v2/pokemon";
+            string json;
+
+            PokeAPI api;
+
+            using (var client = new HttpClient())
+            {
+                do
+                {
+                     json = client.GetStringAsync(url).Result;
+                     api = JsonConvert.DeserializeObject<PokeAPI>(json);
+
+                    foreach (var pokemon in api.results)
+                    {
+                        lstPokemon.Items.Add(pokemon);
+                    }
+                    url = api.info.next;
+
+                } while (api.info.next != null);
+            }
         }
     }
 }
