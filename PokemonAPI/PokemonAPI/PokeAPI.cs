@@ -8,25 +8,34 @@ namespace PokemonAPI
 {
     public class PokeAPI
     {
-        public Info info { get; set; }
-        public List<Pokemon> results { get; set; }
+        public int count { get; set; }
+        public string next { get; set; }
+        public string previous { get; set; }
+        public List<Results> results { get; set; }
     }
-    public class Pokemon
+    public class Results
     {
         public string name { get; set; }
-        public int weight { get; set; }
-        public int height { get; set; }
-        public string image { get; set; }
         public string url { get; set; }
         public override string ToString()
         {
             return name;
         }
     }
-    public class Info
+    public class Pokemon
     {
-        public int count { get; set; }
-        public string next { get; set; }
-        public string previous { get; set; }
+        public int id { get; set; }
+        public int height { get; set; }
+        public int weight { get; set; }
+        public Sprite sprites { get; set; }
+        public override string ToString()
+        {
+            return $"They weigh {weight} lbs and are {height} meters tall.";
+        }
+    }
+    public class Sprite
+    {
+        public string front_default { get; set; }
+        public string back_default { get; set; }
     }
 }

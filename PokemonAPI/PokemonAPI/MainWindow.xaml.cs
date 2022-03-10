@@ -42,10 +42,15 @@ namespace PokemonAPI
                     {
                         lstPokemon.Items.Add(pokemon);
                     }
-                    url = api.info.next;
+                    url = api.next;
 
-                } while (api.info.next != null);
+                } while (api.next != null);
             }
+        }
+
+        private void lstPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }
