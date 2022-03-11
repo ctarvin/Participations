@@ -28,10 +28,6 @@ namespace PokemonAPI
         public int height { get; set; }
         public int weight { get; set; }
         public Sprite sprites { get; set; }
-        public override string ToString()
-        {
-            return $"They weigh {weight} lbs and are {height} meters tall.";
-        }
     }
     public class Sprite
     {

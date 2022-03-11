@@ -13,7 +13,7 @@
         <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Margin="429,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Margin="649,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Image x:Name="imgPoke" Margin="422,111,21,70"/>
-        <Button x:Name="btnSwitch" Content="Switch" HorizontalAlignment="Left" Margin="556,375,0,0" VerticalAlignment="Top" Height="32" Width="89"/>
+        <Button x:Name="btnSwitch" Content="Switch" HorizontalAlignment="Left" Margin="556,375,0,0" VerticalAlignment="Top" Height="32" Width="89" Click="btnSwitch_Click"/>
 
     </Grid>
 </Window>
